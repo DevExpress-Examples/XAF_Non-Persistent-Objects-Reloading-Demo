@@ -157,8 +157,8 @@ namespace NonPersistentObjectsDemo.Web {
             this.Modules.Add(this.cloneObjectModule);
             this.Modules.Add(this.conditionalAppearanceModule);
             this.Modules.Add(this.fileAttachmentsAspNetModule);
-            this.Modules.Add(this.reportsModuleV2);
-            this.Modules.Add(this.reportsAspNetModuleV2);
+            //this.Modules.Add(this.reportsModuleV2);
+            //this.Modules.Add(this.reportsAspNetModuleV2);
             this.Modules.Add(this.schedulerModuleBase);
             this.Modules.Add(this.schedulerAspNetModule);
             this.Modules.Add(this.scriptRecorderModuleBase);

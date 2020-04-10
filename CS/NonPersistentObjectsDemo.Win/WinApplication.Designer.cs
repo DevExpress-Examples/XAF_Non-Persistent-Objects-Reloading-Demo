@@ -82,8 +82,8 @@
             this.Modules.Add(this.cloneObjectModule);
             this.Modules.Add(this.conditionalAppearanceModule);
             this.Modules.Add(this.fileAttachmentsWindowsFormsModule);
-            this.Modules.Add(this.reportsModuleV2);
-            this.Modules.Add(this.reportsWindowsFormsModuleV2);
+            //this.Modules.Add(this.reportsModuleV2);
+            //this.Modules.Add(this.reportsWindowsFormsModuleV2);
             this.Modules.Add(this.schedulerModuleBase);
             this.Modules.Add(this.schedulerWindowsFormsModule);
             this.Modules.Add(this.scriptRecorderModuleBase);
