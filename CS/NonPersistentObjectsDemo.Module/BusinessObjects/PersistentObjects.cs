@@ -10,7 +10,7 @@ using DevExpress.Xpo;
 namespace NonPersistentObjectsDemo.Module.BusinessObjects {
 
     [DefaultClassOptions]
-    [DevExpress.ExpressApp.DC.XafDefaultProperty(nameof(Address))]
+    [DevExpress.ExpressApp.DC.XafDefaultProperty(nameof(Order.Address))]
     public class Order : BaseObject {
         public Order(Session session) : base(session) { }
 
@@ -45,7 +45,7 @@ namespace NonPersistentObjectsDemo.Module.BusinessObjects {
         Pending, Confirmed, Ready, Delivered, Canceled
     }
 
-    [DevExpress.ExpressApp.DC.XafDefaultProperty(nameof(Product))]
+    [DevExpress.ExpressApp.DC.XafDefaultProperty(nameof(OrderLine.Product))]
     public class OrderLine : BaseObject {
         public OrderLine(Session session) : base(session) { }
 

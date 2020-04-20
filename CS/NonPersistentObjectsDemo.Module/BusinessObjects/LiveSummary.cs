@@ -120,7 +120,8 @@ namespace NonPersistentObjectsDemo.Module.BusinessObjects {
             }
         }
         private LiveSummary GetObject(LiveSummary obj) {
-            if(obj.ObjectSpace == null || obj.ObjectSpace.IsNewObject(obj)) {
+            var link = obj as IObjectSpaceLink;
+            if(link == null || link.ObjectSpace == null || link.ObjectSpace.IsNewObject(obj)) {
                 return null;
             }
             else {

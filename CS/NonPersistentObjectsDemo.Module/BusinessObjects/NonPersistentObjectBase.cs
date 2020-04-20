@@ -13,7 +13,8 @@ namespace NonPersistentObjectsDemo.Module.BusinessObjects {
 
     public abstract class NonPersistentObjectBase : INotifyPropertyChanged, IObjectSpaceLink {
         private IObjectSpace objectSpace;
-        public IObjectSpace ObjectSpace {
+        protected IObjectSpace ObjectSpace { get { return objectSpace; } }
+        IObjectSpace IObjectSpaceLink.ObjectSpace {
             get { return objectSpace; }
             set {
                 if(objectSpace != value) {

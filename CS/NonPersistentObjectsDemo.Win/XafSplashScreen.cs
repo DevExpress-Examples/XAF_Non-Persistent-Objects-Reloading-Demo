@@ -49,8 +49,5 @@ namespace NonPersistentObjectsDemo.Win {
         }
         
         #endregion
-
-        public enum SplashScreenCommand {
-        }
     }
 }
