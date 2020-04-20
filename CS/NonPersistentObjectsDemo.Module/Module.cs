@@ -43,8 +43,8 @@ namespace NonPersistentObjectsDemo.Module {
             if(npos != null) {
                 IObjectSpace persistentObjectSpace = Application.CreateObjectSpace(typeof(BaseObject));
                 npos.AdditionalObjectSpaces.Add(persistentObjectSpace);
-                npos.NeedDisposeAdditionalObjectSpaces = true;
-                npos.NeedReloadAdditionalObjectSpaces = true;
+                npos.AutoDisposeAdditionalObjectSpaces = true;
+                npos.AutoRefreshAdditionalObjectSpaces = true;
                 new LiveSummaryAdapter(npos);
             }
         }
