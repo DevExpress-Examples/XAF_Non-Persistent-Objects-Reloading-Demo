@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using DevExpress.Data.Filtering;
 using DevExpress.ExpressApp;
 using DevExpress.Persistent.Base;
+using Microsoft.EntityFrameworkCore;
 
 namespace NonPersistentObjectsDemo.Module.BusinessObjects {
 
@@ -42,7 +43,7 @@ namespace NonPersistentObjectsDemo.Module.BusinessObjects {
                 if(!_Count.HasValue && ObjectSpace != null) {
                     var pos = ((NonPersistentObjectSpace)ObjectSpace).AdditionalObjectSpaces.FirstOrDefault(os => os.IsKnownType(typeof(Order)));
                     if(pos != null) {
-                        _Count = Convert.ToInt32(pos.Evaluate(typeof(Order), CriteriaOperator.Parse("Count()"), Criteria));
+                        _Count = GetOrdersQuery(pos).Count();
                     }
                 }
                 return _Count.Value;
@@ -54,22 +55,21 @@ namespace NonPersistentObjectsDemo.Module.BusinessObjects {
                 if(!_Total.HasValue && ObjectSpace != null) {
                     var pos = ((NonPersistentObjectSpace)ObjectSpace).AdditionalObjectSpaces.FirstOrDefault(os => os.IsKnownType(typeof(Order)));
                     if(pos != null) {
-                        _Total = Convert.ToDecimal(pos.Evaluate(typeof(Order), CriteriaOperator.Parse("Sum([Total])"), Criteria));
+                        _Total = GetOrdersQuery(pos).Sum(t => t.Total);
                     }
                 }
                 return _Total.Value;
             }
         }
-        private CriteriaOperator Criteria {
-            get {
-                return CriteriaOperator.Parse("DateDiffDay([Date], Now()) <= ? And [Status] = ?", Period, Status);
-            }
+        private IQueryable<Order> GetOrdersQuery(IObjectSpace objectSpace) {
+            return objectSpace.GetObjectsQuery<Order>()
+                .Where(t => EF.Functions.DateDiffDay(t.Date, DateTime.Now) <= Period && t.Status == Status);
         }
         private IList<Order> _Orders;
         public IList<Order> Orders {
             get {
                 if(_Orders == null && ObjectSpace != null) {
-                    _Orders = ObjectSpace.GetObjects<Order>(Criteria).ToArray();
+                    _Orders = GetOrdersQuery(ObjectSpace).ToList();
                 }
                 return _Orders;
             }
