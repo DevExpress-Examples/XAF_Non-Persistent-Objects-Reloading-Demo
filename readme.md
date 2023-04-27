@@ -5,9 +5,9 @@
 <!-- default badges end -->
 *Files to look at*:
 
-* [LiveSummary.cs](./CS/NonPersistentObjectsDemo.Module/BusinessObjects/LiveSummary.cs)
-* [NonPersistentObjectBase.cs](./CS/NonPersistentObjectsDemo.Module/BusinessObjects/NonPersistentObjectBase.cs)
-* [Module.cs](./CS/NonPersistentObjectsDemo.Module/Module.cs)
+* [LiveSummary.cs](./CS/EFCore/NonPersReloadEF/NonPersReloadEF.Module/BusinessObjects/LiveSummary.cs)
+* [NonPersistentObjectBase.cs](./CS/EFCore/NonPersReloadEF/NonPersReloadEF.Module/BusinessObjects/NonPersistentObjectBase.cs)
+* [Module.cs](./CS/EFCore/NonPersReloadEF/NonPersReloadEF.Module/Module.cs)
 
 
 # How to refresh Non-Persistent Objects and reload nested Persistent Objects
