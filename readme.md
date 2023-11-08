@@ -7,7 +7,10 @@
 # How to refresh Non-Persistent Objects and reload nested Persistent Objects
 
 
-It is often required to cancel changes made to [Non\-Persistent Objects](https://docs.devexpress.com/eXpressAppFramework/116516/concepts/business-model-design/non-persistent-objects?v=20.1) in a view. When a Non-Persistent object has links to Persistent Objects, it is often required to reload these linked objects too. However, the built-in Refresh action has no effect in these scenarios by default.
+It is often required to cancel changes made to [Non\-Persistent Objects](https://docs.devexpress.com/eXpressAppFramework/116516/concepts/business-model-design/non-persistent-objects?v=20.1) in a view. When a Non-Persistent object has links to Persistent Objects, it is often required to reload these linked objects too. However, the built-in Refresh action has no effect in these scenarios by default. This example shows how to refresh data in this usage scenario:
+
+![devenv_8Nt2WqQLBv](https://github.com/DevExpress-Examples/XAF_Non-Persistent-Objects-Reloading-Demo/assets/14300209/0ad2e8ab-ac17-4844-a9d1-a369afe6beca)
+
 
 ## Implementation Details
 
