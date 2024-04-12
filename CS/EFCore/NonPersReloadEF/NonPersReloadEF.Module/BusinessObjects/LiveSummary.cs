@@ -13,7 +13,7 @@ namespace NonPersistentObjectsDemo.Module.BusinessObjects {
 
     [DefaultClassOptions]
     [DevExpress.ExpressApp.DC.DomainComponent]
-    public class LiveSummary : NonPersistentObjectBase {
+    public class LiveSummary :NonPersistentObjectImpl {
         private Guid id;
         [Browsable(false)]
         [DevExpress.ExpressApp.Data.Key]
