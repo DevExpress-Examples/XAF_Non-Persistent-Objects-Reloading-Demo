@@ -30,7 +30,6 @@ To restore a previous non-persistent object state, that state should be kept sep
 ## Files to Review
 
 - [LiveSummary.cs](./CS/EFCore/NonPersReloadEF/NonPersReloadEF.Module/BusinessObjects/LiveSummary.cs)
-- [NonPersistentObjectBase.cs](./CS/EFCore/NonPersReloadEF/NonPersReloadEF.Module/BusinessObjects/NonPersistentObjectBase.cs)
 - [Module.cs](./CS/EFCore/NonPersReloadEF/NonPersReloadEF.Module/Module.cs)
 
 
