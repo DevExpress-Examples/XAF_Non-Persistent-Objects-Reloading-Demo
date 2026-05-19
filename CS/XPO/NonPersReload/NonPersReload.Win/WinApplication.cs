@@ -14,7 +14,6 @@ public class NonPersReloadWindowsFormsApplication : WinApplication {
 		SplashScreen = new DXSplashScreen(typeof(XafSplashScreen), new DefaultOverlayFormOptions());
         ApplicationName = "NonPersReload";
         CheckCompatibilityType = DevExpress.ExpressApp.CheckCompatibilityType.DatabaseSchema;
-        UseOldTemplates = false;
         DatabaseVersionMismatch += NonPersReloadWindowsFormsApplication_DatabaseVersionMismatch;
         CustomizeLanguagesList += NonPersReloadWindowsFormsApplication_CustomizeLanguagesList;
     }
